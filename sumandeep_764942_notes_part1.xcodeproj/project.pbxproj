@@ -15,6 +15,7 @@
 		D000B6142378C381001FD302 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D000B6122378C381001FD302 /* LaunchScreen.storyboard */; };
 		D000B61F2378C381001FD302 /* sumandeep_764942_notes_part1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000B61E2378C381001FD302 /* sumandeep_764942_notes_part1Tests.swift */; };
 		D000B62A2378C381001FD302 /* sumandeep_764942_notes_part1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000B6292378C381001FD302 /* sumandeep_764942_notes_part1UITests.swift */; };
+		D000B6382378C3AA001FD302 /* dataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000B6372378C3AA001FD302 /* dataTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D000B6252378C381001FD302 /* sumandeep_764942_notes_part1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sumandeep_764942_notes_part1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D000B6292378C381001FD302 /* sumandeep_764942_notes_part1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sumandeep_764942_notes_part1UITests.swift; sourceTree = "<group>"; };
 		D000B62B2378C381001FD302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D000B6372378C3AA001FD302 /* dataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		D000B5FB2378C380001FD302 = {
 			isa = PBXGroup;
 			children = (
+				D000B6372378C3AA001FD302 /* dataTableViewController.swift */,
 				D000B6062378C380001FD302 /* sumandeep_764942_notes_part1 */,
 				D000B61D2378C381001FD302 /* sumandeep_764942_notes_part1Tests */,
 				D000B6282378C381001FD302 /* sumandeep_764942_notes_part1UITests */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D000B60C2378C380001FD302 /* ViewController.swift in Sources */,
+				D000B6382378C3AA001FD302 /* dataTableViewController.swift in Sources */,
 				D000B6082378C380001FD302 /* AppDelegate.swift in Sources */,
 				D000B60A2378C380001FD302 /* SceneDelegate.swift in Sources */,
 			);
