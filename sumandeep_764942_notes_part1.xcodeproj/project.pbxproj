@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B94DA2D237B45D20099E3DA /* notesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B94DA2C237B45D20099E3DA /* notesTableViewController.swift */; };
+		9B94DA31237B4E590099E3DA /* taskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B94DA30237B4E590099E3DA /* taskViewController.swift */; };
 		D000B6082378C380001FD302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000B6072378C380001FD302 /* AppDelegate.swift */; };
 		D000B60A2378C380001FD302 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000B6092378C380001FD302 /* SceneDelegate.swift */; };
 		D000B60C2378C380001FD302 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000B60B2378C380001FD302 /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B94DA2C237B45D20099E3DA /* notesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notesTableViewController.swift; sourceTree = "<group>"; };
+		9B94DA30237B4E590099E3DA /* taskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskViewController.swift; sourceTree = "<group>"; };
 		D000B6042378C380001FD302 /* sumandeep_764942_notes_part1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sumandeep_764942_notes_part1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D000B6072378C380001FD302 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D000B6092378C380001FD302 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,10 +82,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D000B5FB2378C380001FD302 = {
+		9B94DA32237B5BB30099E3DA /* view */ = {
 			isa = PBXGroup;
 			children = (
 				D000B6372378C3AA001FD302 /* dataTableViewController.swift */,
+				9B94DA30237B4E590099E3DA /* taskViewController.swift */,
+				9B94DA2C237B45D20099E3DA /* notesTableViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		D000B5FB2378C380001FD302 = {
+			isa = PBXGroup;
+			children = (
 				D000B6062378C380001FD302 /* sumandeep_764942_notes_part1 */,
 				D000B61D2378C381001FD302 /* sumandeep_764942_notes_part1Tests */,
 				D000B6282378C381001FD302 /* sumandeep_764942_notes_part1UITests */,
@@ -102,6 +115,7 @@
 		D000B6062378C380001FD302 /* sumandeep_764942_notes_part1 */ = {
 			isa = PBXGroup;
 			children = (
+				9B94DA32237B5BB30099E3DA /* view */,
 				D000B6072378C380001FD302 /* AppDelegate.swift */,
 				D000B6092378C380001FD302 /* SceneDelegate.swift */,
 				D000B60B2378C380001FD302 /* ViewController.swift */,
@@ -263,6 +277,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D000B60C2378C380001FD302 /* ViewController.swift in Sources */,
+				9B94DA31237B4E590099E3DA /* taskViewController.swift in Sources */,
+				9B94DA2D237B45D20099E3DA /* notesTableViewController.swift in Sources */,
 				D000B6382378C3AA001FD302 /* dataTableViewController.swift in Sources */,
 				D000B6082378C380001FD302 /* AppDelegate.swift in Sources */,
 				D000B60A2378C380001FD302 /* SceneDelegate.swift in Sources */,

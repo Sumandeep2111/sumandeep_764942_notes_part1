@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,6 +23,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="mrp-Pw-gAF" kind="show" id="7Ea-zE-hI5"/>
+                                    <segue destination="mrp-Pw-gAF" kind="show" trigger="accessoryAction" id="5B2-le-NML"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -37,7 +42,7 @@
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Folders" id="zrW-n8-8vh">
+                    <navigationItem key="navigationItem" title="Folders" largeTitleDisplayMode="always" id="zrW-n8-8vh">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="kL0-Ke-2Nm"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -49,12 +54,89 @@
             </objects>
             <point key="canvasLocation" x="484" y="151"/>
         </scene>
+        <!--Notes-->
+        <scene sceneID="HOp-ez-2Qd">
+            <objects>
+                <tableViewController id="mrp-Pw-gAF" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aw4-TI-WOL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="047-gm-nxz">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="047-gm-nxz" id="T8i-bG-5oe">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="JJf-bB-jdG" kind="show" id="tEB-rs-lSw"/>
+                                    <segue destination="JJf-bB-jdG" kind="show" trigger="accessoryAction" id="HzT-bJ-zLO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mrp-Pw-gAF" id="cse-SN-cKN"/>
+                            <outlet property="delegate" destination="mrp-Pw-gAF" id="Ath-4Y-9cY"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Item" image="trash" catalog="system" id="OmD-kn-A0j"/>
+                        <barButtonItem title="Item" image="tray.and.arrow.down" catalog="system" id="mfV-EI-qMa"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="seO-pA-c8k"/>
+                        <barButtonItem title="Item" image="pencil.and.ellipsis.rectangle" catalog="system" id="Ejm-ah-rJa">
+                            <connections>
+                                <action selector="AddNotes:" destination="z4W-7b-Z2b" id="KQ8-M3-veL"/>
+                                <segue destination="JJf-bB-jdG" kind="show" id="xzI-GP-vy6"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Notes" largeTitleDisplayMode="always" id="CyH-b7-gWK">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="ellipsis" catalog="system" id="bIS-dt-0ot"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="myc-Gz-Xyc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="z4W-7b-Z2b" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1241" y="156"/>
+        </scene>
+        <!--Task View Controller-->
+        <scene sceneID="zwO-D5-vaQ">
+            <objects>
+                <viewController id="JJf-bB-jdG" customClass="taskViewController" customModule="sumandeep_764942_notes_part1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fHz-Sj-s91">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AP5-9m-llF">
+                                <rect key="frame" x="20" y="80" width="374" height="268"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="b4Z-am-hDh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FKx-Ki-Nxh"/>
+                    <connections>
+                        <outlet property="taskView" destination="AP5-9m-llF" id="x3a-lR-6qD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lFg-bU-2by" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1971.0144927536232" y="154.6875"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="JgI-jl-cqc">
             <objects>
                 <navigationController toolbarHidden="NO" id="hOd-vH-Qqa" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PSx-qR-Whk">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="PSx-qR-Whk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="24t-cb-A0W">
@@ -70,4 +152,14 @@
             <point key="canvasLocation" x="-435" y="151"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ellipsis" catalog="system" width="64" height="18"/>
+        <image name="pencil.and.ellipsis.rectangle" catalog="system" width="64" height="40"/>
+        <image name="trash" catalog="system" width="60" height="64"/>
+        <image name="tray.and.arrow.down" catalog="system" width="64" height="54"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="HzT-bJ-zLO"/>
+        <segue reference="5B2-le-NML"/>
+    </inferredMetricsTieBreakers>
 </document>
