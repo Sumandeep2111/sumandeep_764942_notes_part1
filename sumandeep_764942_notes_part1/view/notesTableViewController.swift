@@ -10,16 +10,39 @@ import UIKit
 
 class notesTableViewController: UITableViewController {
     var notes:[String]?
-    var index = -1
+    var currentIndex = -1
+    var arrayname:String?
+    
+    @IBOutlet weak var trash: UIBarButtonItem!
+    
+    @IBOutlet weak var tray: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        trash.isEnabled = false
+        tray.isEnabled = false
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         notes = []
+    }
+    
+    @IBAction func ellips(_ sender: UIBarButtonItem) {
+        if trash.isEnabled == false{
+            trash.isEnabled = true
+        }
+        else {
+            trash.isEnabled = false
+        }
+        if tray.isEnabled == false{
+                   tray.isEnabled = true
+               }
+               else {
+                   tray.isEnabled = false
+               }
+        
     }
     
     
@@ -40,8 +63,12 @@ class notesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+   
         let arrayname = notes![indexPath.row]
+       
         cell.textLabel?.text = arrayname
+        
+      cell.accessoryType = .detailButton
 
         // Configure the cell...
 
@@ -94,18 +121,32 @@ class notesTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         if let detailVeiw = segue.destination as? taskViewController{
                    detailVeiw.taskTable = self
+            if let tableViewCell = sender as? UITableViewCell {
+                if let index = tableView.indexPath(for: tableViewCell)?.row
+                {
+                    detailVeiw.textString = notes![index]
+                    currentIndex = index
+                }
+            }
                }
     }
     func updateText(text: String) {
            //var newValue = text
+        if notes != nil && currentIndex != -1 {
+            notes![currentIndex] = text
+            let indexWay = IndexPath(item:currentIndex,section: 0)
+            tableView.reloadRows(at: [indexWay], with: .none)
+            currentIndex = -1
+            
+        }
            
-           guard notes != nil else {
-               return
-           }
+        else if notes != nil && currentIndex == -1 {
+           
            notes!.append(text)
            tableView.reloadData()
        }
        
     
 
+}
 }

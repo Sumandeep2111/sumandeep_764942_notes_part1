@@ -57,17 +57,17 @@
         <!--Notes-->
         <scene sceneID="HOp-ez-2Qd">
             <objects>
-                <tableViewController id="mrp-Pw-gAF" sceneMemberID="viewController">
+                <tableViewController id="mrp-Pw-gAF" customClass="notesTableViewController" customModule="sumandeep_764942_notes_part1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aw4-TI-WOL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="047-gm-nxz">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="cell" id="047-gm-nxz">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="047-gm-nxz" id="T8i-bG-5oe">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="370" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -82,7 +82,11 @@
                         </connections>
                     </tableView>
                     <toolbarItems>
-                        <barButtonItem title="Item" image="trash" catalog="system" id="OmD-kn-A0j"/>
+                        <barButtonItem title="Item" image="trash" catalog="system" id="OmD-kn-A0j">
+                            <connections>
+                                <action selector="delete:" destination="z4W-7b-Z2b" id="Oep-Ad-d41"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem title="Item" image="tray.and.arrow.down" catalog="system" id="mfV-EI-qMa"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="seO-pA-c8k"/>
                         <barButtonItem title="Item" image="pencil.and.ellipsis.rectangle" catalog="system" id="Ejm-ah-rJa">
@@ -93,9 +97,17 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Notes" largeTitleDisplayMode="always" id="CyH-b7-gWK">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="ellipsis" catalog="system" id="bIS-dt-0ot"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="ellipsis" catalog="system" id="bIS-dt-0ot">
+                            <connections>
+                                <action selector="ellips:" destination="mrp-Pw-gAF" id="jwe-8Q-TgD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="trash" destination="OmD-kn-A0j" id="y3J-YC-yCP"/>
+                        <outlet property="tray" destination="mfV-EI-qMa" id="mS4-fa-xgV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="myc-Gz-Xyc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="z4W-7b-Z2b" userLabel="Exit" sceneMemberID="exit"/>
@@ -113,7 +125,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AP5-9m-llF">
                                 <rect key="frame" x="20" y="80" width="374" height="268"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
