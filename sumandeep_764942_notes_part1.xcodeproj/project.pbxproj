@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B56579D237DDF4200CA7A73 /* struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B56579C237DDF4200CA7A73 /* struct.swift */; };
 		9B94DA2D237B45D20099E3DA /* notesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B94DA2C237B45D20099E3DA /* notesTableViewController.swift */; };
 		9B94DA31237B4E590099E3DA /* taskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B94DA30237B4E590099E3DA /* taskViewController.swift */; };
 		D000B6082378C380001FD302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000B6072378C380001FD302 /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B56579C237DDF4200CA7A73 /* struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = struct.swift; sourceTree = "<group>"; };
 		9B94DA2C237B45D20099E3DA /* notesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notesTableViewController.swift; sourceTree = "<group>"; };
 		9B94DA30237B4E590099E3DA /* taskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskViewController.swift; sourceTree = "<group>"; };
 		D000B6042378C380001FD302 /* sumandeep_764942_notes_part1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sumandeep_764942_notes_part1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +121,7 @@
 				D000B6072378C380001FD302 /* AppDelegate.swift */,
 				D000B6092378C380001FD302 /* SceneDelegate.swift */,
 				D000B60B2378C380001FD302 /* ViewController.swift */,
+				9B56579C237DDF4200CA7A73 /* struct.swift */,
 				D000B60D2378C380001FD302 /* Main.storyboard */,
 				D000B6102378C381001FD302 /* Assets.xcassets */,
 				D000B6122378C381001FD302 /* LaunchScreen.storyboard */,
@@ -280,6 +283,7 @@
 				9B94DA31237B4E590099E3DA /* taskViewController.swift in Sources */,
 				9B94DA2D237B45D20099E3DA /* notesTableViewController.swift in Sources */,
 				D000B6382378C3AA001FD302 /* dataTableViewController.swift in Sources */,
+				9B56579D237DDF4200CA7A73 /* struct.swift in Sources */,
 				D000B6082378C380001FD302 /* AppDelegate.swift in Sources */,
 				D000B60A2378C380001FD302 /* SceneDelegate.swift in Sources */,
 			);
